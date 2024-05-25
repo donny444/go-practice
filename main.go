@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-var numberInt, numberInt2 int = 1000, 2000
+var numberInt, numberInt2 int = 3000, 10000
 var msg string = "Hello"
 
 func main() {
@@ -16,4 +16,6 @@ func main() {
 	fmt.Println(float64(numberInt) + numberfloat)
 	fmt.Println(msg + "World")
 	fmt.Println("my money =", numberInt)
+	fmt.Println("your money =", numberInt2)
+	fmt.Println("1 inch is equal to", numberfloat, "centimeters")
 }

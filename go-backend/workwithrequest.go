@@ -2,7 +2,7 @@ package main
 
 import (
 	"encoding/json"
-	"io/ioutil"
+	"io"
 	"log"
 	"net/http"
 )
@@ -65,7 +65,7 @@ func courseHandler(w http.ResponseWriter, r *http.Request) {
 		w.Write(courseJSON)
 	case http.MethodPost:
 		var newCourse Course
-		Bodybyte, err := ioutil.ReadAll(r.Body)
+		Bodybyte, err := io.ReadAll(r.Body)
 		if err != nil {
 			w.WriteHeader(http.StatusBadRequest)
 			return
