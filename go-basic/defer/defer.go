@@ -2,10 +2,10 @@ package main
 
 import "fmt"
 
-func add(value1, value2 float64) {
-	result := value1 + value2
-	fmt.Println("result :", result)
-}
+// func add(value1, value2 float64) {
+// 	result := value1 + value2
+// 	fmt.Println("result :", result)
+// }
 
 func loop() {
 	for i := 0; i < 10; i++ {
@@ -15,7 +15,7 @@ func loop() {
 
 func deferloop() {
 	for j := 0; j < 10; j++ {
-		defer fmt.Println("j =", j)
+		defer fmt.Println("j =", j) // defer will be executed after the loop (LIFO)
 	}
 }
 func main() {
